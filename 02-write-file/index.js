@@ -17,4 +17,5 @@ stdin.on('data', chunk => {
 stdin.on('error', error => stdout.write('Error', error.message));
 process.on('SIGINT', () => {
   stdout.write('Текст успешно записан. Всего доброго :)');
+  process.exit();
 });
